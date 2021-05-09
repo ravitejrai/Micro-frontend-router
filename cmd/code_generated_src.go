@@ -1,0 +1,45 @@
+package cmd
+
+import "github.com/chriswalz/complete/v3"
+
+var b = &complete.CompTree{Desc: "", Sub: map[string]*complete.CompTree{"index-pack": {Desc: "", Sub: map[string]*complete.CompTree{},
+
+},
+	"reset": {Desc: "", Sub: map[string]*complete.CompTree{},
+		Flags: map[string]*complete.CompTree{
+			"N":                  {Desc: `record only the fact that removed paths will be a`},
+			"keep":               {Desc: `ard, but keep local working tree changes`},
+			"like":               {Desc: `ard, but keep local working tree changes`},
+			"p":                  {Desc: `select diff hunks to remove from the index`},
+			"quiet":              {Desc: `suppress all output`},
+			"soft":               {Desc: `do not touch the index file nor the working tree`},
+			"hard":               {Desc: `match the working tree and index to the given tre`},
+			"intent-to-add":      {Desc: `record only the fact that removed paths will be a`},
+			"merge":              {Desc: `reset out of a conflicted merge`},
+			"mixed":              {Desc: `reset the index but not the working tree (default`},
+			"patch":              {Desc: `select diff hunks to remove from the index`},
+			"q":                  {Desc: `suppress all output`},
+			"recurse-submodules": {Desc: `control recursive updating of submodules`},
+		},
+	},
+	"status": {Desc: "", Sub: map[string]*complete.CompTree{},
+		Flags: map[string]*complete.CompTree{
+			"show-stash":        {Desc: `show stash information`},
+			"M":                 {Desc: `detect renames`},
+			"column":            {Desc: `display in columns`},
+			"ignore-submodules": {Desc: `ignore changes to submodules`},
+			"no-ahead-behind":   {Desc: `don't display detailed ahead/behind counts relativ`},
+			"no-renames":        {Desc: `don't detect renames`},
+			"porcelain":         {Desc: `produce machine-readable output`},
+			"short":             {Desc: `output in short format`},
+			"z":                 {Desc: `use NUL termination on output`},
+			"untracked-files":   {Desc: `show untracked files`},
+			"u":                 {Desc: `show untracked files`},
+			"ignored":           {Desc: `show ignored files as well`},
+			"find-renames":      {Desc: `detect renames, optionally set similarity index`},
+			"no-column":         {Desc: `don't display in columns`},
+			"null":              {Desc: `use NUL termination on output`},
+			"s":                 {Desc: `output in short format`},
+		},
+	},
+}}
