@@ -1,4 +1,4 @@
-import { MockLocationStrategy } from './mock-location-strategy';
+import { CentralLocationStrategy } from './central-location-strategy';
 import {
   NgModule,
   NgModuleFactoryLoader,
@@ -56,7 +56,7 @@ export function setupMicroRouter(
   providers: [
     ROUTER_PROVIDERS,
     { provide: Location, useClass: Location },
-    { provide: LocationStrategy, useClass: MockLocationStrategy },
+    { provide: LocationStrategy, useClass: CentralLocationStrategy },
     { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader },
     {
       provide: Router,

@@ -1,2 +1,2 @@
 export * from './routing.module';
-export * from './mock-location-strategy';
+export * from './central-location-strategy';

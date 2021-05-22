@@ -10,10 +10,10 @@ import { Location } from '@angular/common';
  * An implementation of angulars LocationStrategy that allows 
  * multiple micro-apps to use single angular location.
  *
- * @publicApi
+ * @author RaviTej Rai
  */
 @Injectable()
-export class MockLocationStrategy extends LocationStrategy {
+export class CentralLocationStrategy extends LocationStrategy {
     
   internalPath: string = '/';
   internalTitle: string = '';
