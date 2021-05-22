@@ -27,7 +27,7 @@ import { ɵROUTER_PROVIDERS as ROUTER_PROVIDERS } from '@angular/router';
 import { LocationStrategy, Location } from '@angular/common';
 import { flatten } from '@angular/compiler';
 
-export function setupElementsRouter(
+export function setupMicroRouter(
   urlSerializer: UrlSerializer,
   contexts: ChildrenOutletContexts,
   location: Location,
@@ -60,7 +60,7 @@ export function setupElementsRouter(
     { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader },
     {
       provide: Router,
-      useFactory: setupElementsRouter,
+      useFactory: setupMicroRouter,
       deps: [
         UrlSerializer,
         ChildrenOutletContexts,
@@ -78,13 +78,13 @@ export function setupElementsRouter(
   ],
 })
 
-export class ElementRoutingModule {
+export class RoutingModule {
   static withRoutes(
     routes: Routes,
     config?: ExtraOptions
-  ): ModuleWithProviders<ElementRoutingModule> {
+  ): ModuleWithProviders<RoutingModule> {
     return {
-      ngModule: ElementRoutingModule,
+      ngModule: RoutingModule,
       providers: [
         provideRoutes(routes),
         { provide: ROUTER_CONFIGURATION, useValue: config ? config : {} },
